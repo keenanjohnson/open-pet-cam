@@ -7,8 +7,16 @@ The project currently commbines two excellent balena efforts:
 * [The balena Starter Interface](https://github.com/balena-labs-research/starter-interface)
 * [Python Wifi Connect](https://github.com/balena-labs-research/python-wifi-connect)
 
-## Current status
+## Hardware
 
+The project currently uses the following hardware:
+* [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+* [Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/)
+* [Pan-Tilt HAT by Pimoroni](https://github.com/pimoroni/pantilt-hat)
+
+
+## Current status
+Definitely in work. PRs welcome :)
 
 ## Getting started
 

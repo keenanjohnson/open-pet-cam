@@ -12,4 +12,4 @@ RUN pip install pantilthat smbus flask
 WORKDIR /usr/src/
 COPY . ./
 
-CMD sleep infinity
+CMD modprobe i2c-dev && python /usr/src/pantiltweb.py

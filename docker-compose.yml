@@ -7,3 +7,24 @@ services:
     network_mode: "host"
     labels:
       io.balena.features.kernel-modules: '1'
+  balena-starter-interface:
+    build:
+      context: .
+      dockerfile: interface/Dockerfile.bsi
+    environment:
+      SET_HOSTNAME: "balena" # Optional. Changes the device hostname. UI will become accesible on `balena.local`.
+      UDEV: on # Enables ability to auto mount USB drives in to the container
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - "bdi_db:/app/db" # Stores UI database files
+      - "bdi_storage:/app/storage" # Storage for the File Manager. See docs for more info.
+    privileged: true # This can be removed if not using the USB mounting feature
+    labels:
+      io.balena.features.supervisor-api: 1
+      io.balena.features.balena-api: 1
+
+volumes:
+  bdi_db:
+  bdi_storage:

@@ -24,7 +24,43 @@ services:
     labels:
       io.balena.features.supervisor-api: 1
       io.balena.features.balena-api: 1
+  python-wifi-connect:
+    environment:
+      ## Listening IP and port ##
+      PWC_HOST: "0.0.0.0"
+      PWC_PORT: 9090
+
+      ## Hotspot details ##
+      PWC_HOTSPOT_SSID: "Python Wi-Fi Connect"
+      #PWC_HOTSPOT_PASSWORD: "my-hotspot-password" # Optional. Must be 8 characters or more.
+
+      ## Try to automatically connect to a Wi-Fi network on first boot ##
+      #PWC_AC_SSID: "network-name" # Compulsory for this feature
+      #PWC_AC_USERNAME: "username" # Optional
+      #PWC_AC_PASSWORD: "your-password" # Optional. Must be 8 characters or more.
+
+      ## Wi-Fi Interface ##
+      #PWC_INTERFACE: "wlan0" # By default it automatically detects the interface.
+
+      ## Enable/Disable LED interaction ##
+      #PWC_LED: "on"
+
+      ## Required system variables ##
+      DBUS_SYSTEM_BUS_ADDRESS: "unix:path=/host/run/dbus/system_bus_socket"
+    build:
+      context: ./python-wifi-connect
+      dockerfile: Dockerfile
+    network_mode: "host"
+    restart: on-failure
+    volumes:
+      - "py_wifi_connect_db:/app/db" # Optional if not setting the hotspot ssid and password via the API
+    labels:
+      io.balena.features.dbus: "1"
+    cap_add:
+      - NET_ADMIN
+    privileged: true # This can be removed if you do not need the LED indicator.
 
 volumes:
   bdi_db:
   bdi_storage:
+  py_wifi_connect_db:

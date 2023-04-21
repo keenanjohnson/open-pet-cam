@@ -5,6 +5,7 @@ The project currently commbines two excellent balena efforts:
 
 * [balena Cam](https://github.com/balena-labs-projects/balena-cam)
 * [The balena Starter Interface](https://github.com/balena-labs-research/starter-interface)
+* [Python Wifi Connect](https://github.com/balena-labs-research/python-wifi-connect)
 
 ## Current status
 

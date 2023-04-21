@@ -1,0 +1,3 @@
+[submodule "python-wifi-connect"]
+	path = python-wifi-connect
+	url = https://github.com/balena-labs-research/python-wifi-connect

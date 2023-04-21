@@ -1,16 +1,17 @@
-![](https://github.com/balena-labs-projects/balena-cam/blob/master/balena-cam/app/client/balena-cam-readme.png?raw=true)
+This project attempts to create an open-source petcam using a Raspberry Pi and balena.
 
-Live stream your balena device's camera feed.
+## Technical Overview
+The project currently commbines two excellent balena efforts:
+
+* [balena Cam](https://github.com/balena-labs-projects/balena-cams)
+* [The balena Starter Interface](https://github.com/balena-labs-research/starter-interface)
+
+## Current status
+
 
 ## Getting started
 
 Running this project is as simple as deploying it to a fleet.
-
-One-click deploy to balenaCloud:
-
-[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
-
-**or**
 
 - Sign up on [balena.io](https://balena.io/) and follow our [Getting Started Guide](https://balena.io/docs/learn/getting-started).
 - Clone this repository to your local workspace.
@@ -79,9 +80,3 @@ If you have access to a TURN server and you want your balenaCam devices to use i
 - **Firefox** (but see note above)
 - **Safari**
 - **Edge** (only mjpeg stream)
-
-## Become a balena poweruser
-
-Want to learn more about what makes balena work? Try one of our [masterclasses](https://www.balena.io/docs/learn/more/masterclasses/overview/). Each lesson is a self-contained, deeply detailed walkthrough on core skills to be successful with your next edge project.
-
-Check them out at our [docs](https://www.balena.io/docs/learn/more/masterclasses/overview/). Also, reach out to us on the [Forums](https://forums.balena.io/) if you need help.

@@ -7,6 +7,13 @@ services:
     network_mode: "host"
     labels:
       io.balena.features.kernel-modules: '1'
+  pan-tilt:
+    build: ./pantilt
+    privileged: true
+    restart: always
+    network_mode: "host"
+    labels:
+      io.balena.features.kernel-modules: '1'
   balena-starter-interface:
     build:
       context: .

@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: Update balena.yml
         uses: balena-io-experimental/balena.yml-action@main

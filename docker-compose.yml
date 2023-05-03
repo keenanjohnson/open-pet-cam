@@ -19,8 +19,9 @@ services:
       context: .
       dockerfile: interface/Dockerfile.bsi
     environment:
-      SET_HOSTNAME: "balena" # Optional. Changes the device hostname. UI will become accesible on `balena.local`.
+      SET_HOSTNAME: "pet" # Optional. Changes the device hostname. UI will become accesible on `balena.local`.
       UDEV: on # Enables ability to auto mount USB drives in to the container
+      NETWORK_MODE: bridge # Optional. If set to host, the container will use the host network stack.
     restart: always
     ports:
       - "80:80"
@@ -38,7 +39,7 @@ services:
       PWC_PORT: 9090
 
       ## Hotspot details ##
-      PWC_HOTSPOT_SSID: "Python Wi-Fi Connect"
+      PWC_HOTSPOT_SSID: "Pet Cam Wifi Setup"
       #PWC_HOTSPOT_PASSWORD: "my-hotspot-password" # Optional. Must be 8 characters or more.
 
       ## Try to automatically connect to a Wi-Fi network on first boot ##

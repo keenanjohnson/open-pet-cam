@@ -1,7 +1,9 @@
 name: "Deploy to Balena"
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, closed]
     branches:

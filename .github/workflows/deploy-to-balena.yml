@@ -5,12 +5,11 @@ on:
     types: [opened, synchronize, closed]
     branches:
       - main
-      - master
     paths-ignore:
       - 'docs/**'
 
 env:
-  BALENA_APP: maggie0002/test-fleet
+  BALENA_APP: keenan_johnson/open-pet-cam
 
 jobs:
   build:
@@ -32,5 +31,5 @@ jobs:
       - name: Deploy to Balena
         uses: balena-io/deploy-to-balena-action@master
         with:
-          balena_token: ${{ secrets.BALENA_API_KEY }}
+          balena_token: ${{ secrets.BALENA_TOKEN }}
           fleet: ${{ env.BALENA_APP }}

@@ -1,5 +1,7 @@
 This project attempts to create an open-source petcam using a Raspberry Pi and balena.
 
+<img alt="Picture of the camera." src="https://user-images.githubusercontent.com/2559382/236110570-96657e81-0d23-4715-8962-69ddbf4184e1.jpg" width="600" />
+
 ## Technical Overview
 The project currently commbines two excellent balena efforts:
 
